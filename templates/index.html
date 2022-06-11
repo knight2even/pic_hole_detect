@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hole detect</title>
+{#    <meta http-equiv="refresh" content="4">#}
+    <style>
+
+        .demo{
+
+           margin-top: 300px;}
+
+       .demo1{position: fixed;
+
+           top: 50px; left:0px; bottom:0px; width:100%; height: 50px;z-index:999;}
+
+        .demo2{ position:fixed; left:0px; bottom:150px;  width:100%; height: 50px; z-index:999;}
+
+    </style>
+
+    <script type="text/javascript">
+        function tishi(){
+          location.reload()
+        }
+        setTimeout(tishi,{{ seconds }}*1000)
+    </script>
+</head>
+<body >
+
+    <div class="demo1">
+    <table align="center" border="1" class="demo1">
+        <thead>
+            <tr><th width="180px">Time</th><th width="180px">Type</th><th width="180px">Diameter</th><th width="180px">Distance</th><th width="180px">Image</th></tr>
+        </thead>
+        <tr>
+        {% for item in list %}
+            <tr>
+           <td width="180px" align="center">{{ curtime }}</td><td width="180px" align="center">{{ item[7] }}</td><td width="180px" align="center">{{ item[6] }}</td><td width="180px" align="center">{{ last_distance }}</td><td width="180px" align="center"><script type="text/javascript">
+            document.write("<img src='../static/1.png' height='100' weight='150' alt='' />");
+        </script></td></tr>
+        {% endfor %}
+    </tr>
+
+    </table>
+    </div>
+{#    <tr><td>112</td><td>112</td><td width="180px">11</td><td width="350px">22</td><td><script type="text/javascript">#}
+{#            document.write("<img src='../static/1.png' height='100' weight='150' alt='' />");#}
+{#        </script></td></tr>#}
+{##}
+{#        <tr><td>112</td><td>112</td><td>11</td><td>22</td><td><script type="text/javascript">#}
+{#            document.write("<img src='../static/2.png' height='100' weight='150' alt='' />");#}
+{#        </script></td></tr>#}
+{##}
+{#        <tr><td>112</td><td>112</td><td>11</td><td>22</td><td><script type="text/javascript">#}
+{#            document.write("<img src='../static/3.png' height='100' weight='150' alt='' />");#}
+{#        </script></td></tr>#}
+
+
+        <div class="demo2">
+        <table>
+
+            <tr><td width="1300px"><h1>现场报警灯</h1></td><td width="1300px"><h1>现场广播</h1></td></tr>
+            <tr><td><script type="text/javascript">
+            document.write("<img src='../static/灯%20(4).png' height='100' weight='150' alt='' />");
+        </script>
+
+                <script type="text/javascript">
+            document.write("<img src='../static/灯%20(3).png' height='100' weight='150' alt='' />");
+        </script>
+            </td>
+
+
+                <td><script type="text/javascript">
+            document.write("<img src='../static/扬声器.png' height='100' weight='150' alt='' />");
+        </script>
+
+                <script type="text/javascript">
+            document.write("<img src='../static/扬声器%20(1).png' height='100' weight='150' alt='' />");
+        </script>
+                </td></tr>
+        </table>
+
+        </div>
+
+
+    </body>
+</html>

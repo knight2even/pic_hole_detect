@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0}
+        html,body{height: 100%}     /*这里很关键*/
+
+        .outer-wrap{
+            /*只有同时为html和body设置height: 100%时，这里的height才生效，
+            并且随浏览器窗口变化始终保持和浏览器视窗等高*/
+            height: 100%;
+            position: relative;
+            background-color: rgba(0, 0, 0, .5);
+        }
+        .login-panel{
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -200px;
+        }
+    </style>
+</head>
+<body background="../static/5.png" style=" background-repeat:no-repeat ;
+background-size:100% 100%;
+background-attachment: fixed;">
+    <div class="outer-wrap">
+        <div class="login-panel"><h1>登录</h1><form  method="post">
+         <input type="text"  name="user" ><br><br>
+         <input  type="password" name="pwd" ><br><br>
+         <input  type="submit" name="登录">{{msg}}
+        </form></div>
+
+    </div>
+
+</body>
+</html>
